@@ -1,0 +1,55 @@
+//variables
+$btn-color-primary: $white;
+$btn-color-secondary: $transparent;
+$btn-color-inactive: $white;
+.btn-white{
+    border-radius: 100px;
+    border: 1px solid $btn-color-primary;
+    display: block;
+    padding: 8px 0;
+    margin: 0 auto 32px;
+    width: 100%;
+    max-width:200px;
+    text-align: center;
+    color: $btn-color-primary;
+    background: $transparent;
+    outline:none;
+    @include trans(all, 0.3s, ease-in-out);
+    &:hover{
+        color: $black;
+        background: $btn-color-primary;
+        text-decoration: none;
+    }
+}
+.btn-green{
+    border-radius: 100px;
+    border: 1px solid $green;
+    display: block;
+    padding: 8px 0;
+    margin: 0 auto 32px;
+    width: 100%;
+    max-width:200px;
+    text-align: center;
+    color: $green;
+    background: $transparent;
+    outline:none;
+    @include trans(all, 0.3s, ease-in-out);
+    &:hover{
+        color: $black;
+        background: $btn-color-primary;
+        text-decoration: none;
+    }
+}
+.btn-scroll-down{
+    color: $btn-color-primary;
+    position: fixed;
+    bottom: 32px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+        color: white;
+    }
+}

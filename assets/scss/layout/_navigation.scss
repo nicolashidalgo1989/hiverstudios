@@ -1,0 +1,62 @@
+.tab{
+    display:  block;
+    text-align: center;
+    margin-bottom:40px;
+    & a{
+        display: inline-block;
+        color:$white;
+        padding:16px;
+        font-weight:200;
+        font-size:0.9em;
+        text-transform:uppercase;
+        &:hover, &.active, &:focus, &:active{
+            text-decoration:none;
+            color:$white;
+            &:after{
+                width:100%;
+            }
+            &~ div:not([data-filter="ilustration"]){
+                height:0px;
+                width:0px;
+                border:none;
+                margin:0;
+            }
+            &~ div:not([data-filter="web"]){
+                height:0px;
+                width:0px;
+                border:none;
+                margin:0;
+            }
+            &~ div:not([data-filter="design"]){
+                height:0px;
+                width:0px;
+                border:none;
+                margin:0;
+            }
+        }
+        &:after{
+            content:"";
+            width:0;
+            height:1px;
+            display: block;
+            background: $white;
+            margin:0 auto;
+            @include trans(all, 0.3s, ease-in-out);
+        } 
+    }
+}
+.tags{
+    width:100%;
+    font-style:italic;
+    font-size:0.9em;
+    margin-bottom:32px;
+    text-align:center;
+    & a {
+        color: $purple-bg-1;
+        @include trans(color, 0.3s, ease-in-out);
+        &:hover{
+            color: $green;
+            text-decoration:none;
+        }
+    }
+}

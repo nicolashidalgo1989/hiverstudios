@@ -1,0 +1,189 @@
+.header{
+    width: 100%;
+    height: 100px;
+    position:fixed;
+    z-index:5;
+    padding: 32px 0;
+    @include linear-gradient($purple, $black-transparent);
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    overflow:hidden;
+    .title-brand{
+        line-height: 0;
+        & a{
+            font-family: "Gothic A1", "Arial", sans-serif;
+            font-weight: 200;
+            font-size: 16px;
+            color: white;
+            margin: 0;
+            & strong{
+                font-weight: 600;
+            }
+            &:hover{
+                text-decoration:none;
+            }
+        }
+    } 
+    .btn-menu {
+        width: 16px;
+        height: 16px;
+        position: relative;
+        margin: 4px auto;
+        z-index: 3;
+        cursor: pointer; 
+        .black-line{
+            content: "";
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            border-radius: 100px;
+            left: 0;
+            top: 0;
+            background-color: $white; 
+        }
+        & .line {
+            @extend .black-line;
+            @include trans(all,0.3s,ease-in-out); 
+            &:before {
+                @extend .black-line;
+                top: 6px;
+                @include trans(all,0.3s,ease-in-out);
+            }
+            &:after {
+                @extend .black-line;
+                top: 12px;
+                @include trans(all,0.3s,ease-in-out);
+            }
+        }
+        &.close-btn{
+            & .line {
+                background-color: transparent;
+                &:before,
+                &:after { 
+                    top: 7px;
+                }
+                &:before {
+                    @include rotate(-45deg); 
+                }
+                &:after {
+                    @include rotate(45deg);
+                }
+            }  
+        }
+    }
+    &.open{
+        height: 100vh; 
+    }
+    .btn-search{
+        position: relative;
+        cursor: pointer;
+        width: 16px;
+        float: right;
+        @include trans(all, 0.3s, ease-in-out); 
+        & .input-search { 
+            display: none;
+        }
+        & .clear-search{ 
+            display: none;
+        }
+        &:after{
+            content: "";
+            width: 0;
+            height: 1px;
+            background: $white;
+            display: block;
+            margin: 0 auto; 
+            right: 0;
+            bottom: 0;
+            position: absolute;
+            @include trans(all, 0.3s, ease-in-out); 
+        }
+        &.open{
+            width: 100%;
+            &:after{ 
+                width:100%; 
+            }
+            & .input-search {
+                font-family: $font;
+                width: 90%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                background: transparent;
+                border: none;
+                outline: none;
+                color: #f0f0f0; 
+                display: block;
+                font-weight:200;
+                text-indent:8px;
+                font-size:12px;
+            }
+            & .clear-search{    
+                font-size: 12px;
+                width: 100%;
+                position: absolute;
+                right: 0;
+                bottom: -24px;
+                display:block;
+                opacity: 0;    
+                z-index: 1;
+                &.show{
+                    opacity:1
+                }
+            }
+        }
+    }
+    .menu {
+        padding:150px 0; 
+        -webkit-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+        & ul{
+            padding:0;
+            list-style:none;
+            & a{
+                width: 50%;
+                display: block;
+                position: relative;
+                padding: 8px 0;
+                margin: 0 auto 32px; 
+                color: white;
+                &:after{
+                    content: "";
+                    width: 0;
+                    height: 1px; 
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                    background: $white;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    transition: all 0.3s ease-in-out;
+                }
+                &:hover{
+                    text-decoration:none;
+                    &:after{
+                        width: 100%;  
+                    }
+                }
+            }  
+        }
+        &.hidden{
+            opacity:0;
+        }
+    }
+} 
+.bgFixed {
+    position: fixed;
+    background: $white;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    @include opacity(.95); 
+	&.hide {
+		 @include opacity(0);
+	}
+} 

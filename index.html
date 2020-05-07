@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+        Hiver Studios | Portfolio Web de Nicolas Hidalgo
+    </title> 
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet"> 
+    <link href="assets/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-6 text-left"> 
+                    <h1 class="title-brand"> 
+                        <a href="index.html">
+                            <strong>hiver</strong> studios
+                        </a>   
+                    </h1> 
+                </div> 
+                <div class="col-6 text-right">
+                    <div class="btn-menu"></div>
+                </div>   
+            </div>
+        </div>
+    </header>
+    <section class="home" id="home">
+        <div class="container aligner h-75-vh">
+            <div class="row">
+                <div class="col-lg-12">
+                    <figure class="logo">
+                        <svg>
+                            <path d="M0 70 L 70 70, 70 30, 100 90, 100 50, 200 50" class="path round"> </path>
+                        </svg> 
+                    </figure> 
+                    
+                </div>
+                <div class="col-lg-12">
+                    <h2 class="sr-only">I´m a front-end developer designer &amp; illustrator</h2>  
+                    <h1>
+                        Mi nombre es Nicolas Hidalgo
+                        <small>Desarrollador Front-End & Diseñador Web</small>   
+                    </h2> 
+                    <a href="portafolio.html" class="btn-white">Portafolio</a>
+                </div>
+            </div>
+        </div> 
+    </section> 
+    <section class="contact d-none" id="contacto">
+        <div class="container">
+            <h2>Contáctame</h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 offset-lg-2">
+                    <p class="">Para requerimientos de desarrollos web y cotizaciones, completa los campos y responderé a la brevedad posible a tu correo.</p>
+                    <h3 class="text-left">Vinculos</h3>
+                    <ul class="rss"> 
+                        <li>
+                            <a href="">
+                                <i class="fab fa-github"></i>
+                                github
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="">
+                                <i class="fab fa-free-code-camp"></i>
+                                freeCodeCamp
+                            </a>
+                        </li> 
+                        <li>
+                            <a href="">
+                                <i class="fa fa-envelope"></i>
+                                nicolas.hidalgo.1989@gmail.com
+                            </a>
+                        </li> 
+                    </ul>
+                </div>   
+                <div class="col-lg-4 col-md-6">
+                    <form onsubmit="return validateForm()" method="post" action="/action_page.php" name="myForm">
+                        <div class="input-form">
+                            <input type="text" name="nombre" id="nombre" class="input"/> 
+                            <label for="nombre">Nombreboot</label> 
+                        </div>
+                        <div class="input-form">
+                            <input type="text" name="email" id="email" class="input"/>
+                            <label for="email">Email</label> 
+                        </div>
+                        <div class="input-form">
+                            <input type="text" name="asunto" id="asunto" class="input"/>
+                            <label for="asunto">Asunto</label> 
+                        </div>
+                        <div class="input-form">
+                            <textarea id="mensaje" name="mensaje" class="textarea"></textarea>
+                            <label for="mensaje">Mensaje</label> 
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="submit" class="btn-white" value="Enviar"/> 
+                            </div> 
+                        </div> 
+                    </form>
+                </div>          
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>hiver studios &copy; Todos los derechos reservados 2020</p>
+                </div> 
+            </div>
+        </div>
+    </footer> 
+    <img src="assets/img/caspar-rubin-224229-unsplash.jpg" alt="" class="background-image">  
+    <script src="assets/js/all.min.js"></script>  
+    <script src="assets/js/app.js"></script>  
+    <script>
+        function validateForm() {
+            var nombre = document.forms["myForm"]["nombre"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var asunto = document.forms["myForm"]["asunto"].value;
+            var mensaje = document.forms["myForm"]["mensaje"].value;
+            if (nombre == "") {
+                alert("Ingrese un nombre");
+                return false;
+            }
+            if (email == "") {
+                alert("Ingrese un email");
+                return false;
+            }
+            if (asunto == "") {
+                alert("Ingrese un asunto");
+                return false;
+            }
+            if (mensaje == "") {
+                alert("Ingrese un mensaje");
+                return false;
+            }
+        }        
+    </script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+        $.validate({
+            lang: 'es'
+        });
+    </script>
+</html>

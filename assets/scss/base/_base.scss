@@ -1,0 +1,38 @@
+body{
+    background: $black;
+    color: $white;
+    font-size: $fontSize;
+    font-family: $font;
+} 
+.aligner{
+    @include flex(center, center, columns);
+}
+.overflow-hidden{
+    overflow: hidden!important;
+}
+.h-75-vh{
+    height: 75vh;
+}
+.banner{
+    width:100%;
+    position:relative;
+    height:auto;
+    min-height: 40vh;
+    padding-top:132px;
+    margin-bottom:32px;
+    & .content {
+        position:absolute;
+        bottom:0;
+        width:100%;
+        z-index:2;
+    }
+    & .background-image{
+        position:absolute;
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position: center;
+        z-index:1;
+        opacity: 0.16;  
+    }
+}
