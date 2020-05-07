@@ -87,7 +87,7 @@ function outInput(e){
 } 
 let linksHeader = [{
     name: 'Inicio',
-    href: '/hiverstudios/',
+    href: '/hiverstudios/index.html',
     target: '_self',
 }, 
 {
