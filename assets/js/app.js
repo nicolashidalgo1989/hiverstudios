@@ -87,17 +87,17 @@ function outInput(e){
 } 
 let linksHeader = [{
     name: 'Inicio',
-    href: '/',
+    href: '/hiverstudios/',
     target: '_self',
 }, 
 {
     name: 'Portfolio',
-    href: 'portafolio.html',
+    href: '/hiverstudios/portafolio.html',
     target: '_self'
 }, 
 {
     name: 'Acerca',
-    href: 'acerca.html',
+    href: '/hiverstudios/acerca.html',
     target: '_self'
 }
 ];
