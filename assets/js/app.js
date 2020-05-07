@@ -92,12 +92,12 @@ let linksHeader = [{
 }, 
 {
     name: 'Portfolio',
-    href: '/portafolio.html',
+    href: 'portafolio.html',
     target: '_self'
 }, 
 {
     name: 'Acerca',
-    href: '/acerca.html',
+    href: 'acerca.html',
     target: '_self'
 }
 ];
